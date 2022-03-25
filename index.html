@@ -28,6 +28,7 @@
   <body>
     <h1 id="data"></h1>
     <iframe
+      id="video"
       width="640"
       height="360"
       src="video.mp4"
@@ -35,11 +36,17 @@
       autoplay="1"
     ></iframe>
   </body>
-  
-<script>
-const cum = ['Nee', 'Ja'];
-const meerCum = cum.splice(Math.floor(Math.random() * cum.length), 1).join();
 
-document.getElementById("data").innerHTML = meerCum;
-</script>
+  <script>
+    const jaOfNee = ['ja', 'nee'];
+
+    const random = Math.floor(Math.random() * jaOfNee.length);
+
+    if (jaOfNee[random] === 'ja') {
+      document.getElementById('data').innerHTML = 'ja';
+    } else {
+      document.getElementById('data').innerHTML = 'nee';
+      document.getElementById('video').remove();
+    }
+  </script>
 </html>

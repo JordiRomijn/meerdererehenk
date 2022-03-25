@@ -26,7 +26,7 @@
     </style>
   </head>
   <body>
-    <h1>Ja</h1>
+    <h1 id="data"></h1>
     <iframe
       width="640"
       height="360"
@@ -35,4 +35,11 @@
       autoplay="1"
     ></iframe>
   </body>
+  
+<script>
+const cum = ['Nee', 'Ja'];
+const meerCum = cum.splice(Math.floor(Math.random() * cum.length), 1).join();
+
+document.getElementById("data").innerHTML = meerCum;
+</script>
 </html>

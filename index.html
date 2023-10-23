@@ -38,10 +38,10 @@
   </body>
 
   <script>
-fetch('https://api.ipify.org?format=json')
-  .then(response => response.json())
-  .then(data => console.log(data.ip));
-    
+    fetch("https://api.ipify.org?format=json")
+      .then((response) => response.json())
+      .then((data) => console.error(data.ip));
+
     const jaOfNee = ['ja', 'nee'];
 
     const random = Math.floor(Math.random() * jaOfNee.length);
